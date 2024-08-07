@@ -1,0 +1,53 @@
+@import '@/app.module.css';
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    width: 400px;
+    margin: 0;
+    padding: 0;
+    color: #66837E;
+    margin-top: 10%;
+    font-size: 2rem;
+}
+
+input {
+    height: 30px;
+    width: 80%;
+    border: 4px solid #66837E;
+}
+
+.form {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+}
+
+.container h1 {
+    margin: 40px;
+}
+
+.form div {
+    display: flex;
+    gap: 40px;
+}
+
+.inputs div:nth-child(1) {
+    gap: 100px;
+}
+
+button {
+    width: 30%;
+}
