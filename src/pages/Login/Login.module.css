@@ -8,21 +8,23 @@ body {
 
 .container {
     background-color: white;
-    width: 400px;
-    margin: 0;
-    padding: 0;
+    height: 400px;
+    margin: auto;
+    width: 30%;
     color: #66837E;
     margin-top: 10%;
     font-size: 2rem;
+    border-radius: 15px;
 }
 
 input {
     height: 30px;
-    width: 80%;
+    width: 90%;
     border: 4px solid #66837E;
 }
 
 .form {
+    height: 60%;
     margin: 40px;
     display: flex;
     flex-direction: column;
@@ -39,15 +41,30 @@ input {
     margin: 40px;
 }
 
-.form div {
-    display: flex;
-    gap: 40px;
-}
-
 .inputs div:nth-child(1) {
     gap: 100px;
 }
 
 button {
     width: 30%;
+}
+
+.btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btns button {
+    color: #66837E;
+    background-color: white;
+    border: 2px solid #66837E;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.btns button:hover {
+    color: white;
+    background-color: #66837E;
+    padding: 7px;
 }

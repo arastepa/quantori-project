@@ -5,7 +5,7 @@ import Home from '@/pages/Home/Home';
 import Contact from '@/pages/Contact/Contact';
 import About from '@/pages/About/About';
 import Login from '@/pages/Login/Login';
-import Profile from './pages/Profile/profile';
+import Profile from '@/pages/Profile/profile';
 
 const AppRoutes = () => {
   return (

@@ -15,7 +15,7 @@ const Login = () => {
             <input type="password" name="password" id="password" />
           </div>
         </div>
-        <div className="btns">
+        <div className={styles.btns}>
           <button>submit</button>
           <button>cancel</button>
         </div>
