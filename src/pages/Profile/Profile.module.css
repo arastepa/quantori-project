@@ -1,0 +1,36 @@
+/* @import '@/app.module.c/ssssss'; */
+
+.personla div {
+    display: flex;
+    flex-direction: column;
+}
+
+.personal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.personal h2 {
+    text-align: center;
+}
+
+label {
+    display: flex;
+}
+
+.container {
+    margin: auto;
+    width: 30%;
+    background-color: white;
+    min-height: fit-content;
+    color: #66837E;
+    margin-top: 10%;
+    font-size: 2rem;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.personal input {
+    width: 90%;
+}

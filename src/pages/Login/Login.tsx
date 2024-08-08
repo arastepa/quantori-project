@@ -1,7 +1,9 @@
 import styles from '@/pages/Login/Login.module.css';
 import { login } from '@/services/login';
 import { Data } from '@/types/types';
+import { useEffect } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const {
@@ -10,7 +12,12 @@ const Login = () => {
     reset,
     formState: { errors },
   } = useForm<Data>();
-
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (localStorage.getItem('token')) {
+      navigate('/profile');
+    }
+  }, [navigate]);
   const loginUser: SubmitHandler<Data> = (data) => {
     console.log(data);
     login(data);
