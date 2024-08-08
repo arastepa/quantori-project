@@ -1,0 +1,15 @@
+@import '@/app.module.css';
+
+.contact {
+    background-color: white;
+    color: #66837E;
+    margin: auto;
+    width: 30%;
+    margin-top: 10%;
+    padding: 20px;
+}
+
+.contact p {
+    display: flex;
+    align-items: center;
+}

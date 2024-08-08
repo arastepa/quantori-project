@@ -1,3 +1,6 @@
+@import '@/app.module.css';
+
+
 .error {
     background: white;
     width: 80%;
