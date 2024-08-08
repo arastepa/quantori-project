@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const {
@@ -21,11 +22,17 @@ const Login = () => {
       navigate('/profile');
     }
   }, [navigate]);
-  const loginUser: SubmitHandler<Data> = (data) => {
-    console.log(data);
-    login(data);
-    navigate('/profile');
-    dispatch(setLogged(true));
+  const loginUser: SubmitHandler<Data> = async (data) => {
+    try {
+      const res = await login(data);
+      if (res) {
+        dispatch(setLogged(true));
+        toast.success('successful login');
+        navigate('/profile');
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleCancel = () => {

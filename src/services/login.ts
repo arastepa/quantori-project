@@ -1,3 +1,5 @@
+import { toast } from 'react-toastify';
+
 export const login = async (data: { username: string; psw: string }) => {
   try {
     const response = await fetch('https://dummyjson.com/auth/login', {
@@ -15,7 +17,9 @@ export const login = async (data: { username: string; psw: string }) => {
 
     const token: string = (await response.json()).token;
     localStorage.setItem('token', token);
+    return true;
   } catch (error) {
-    console.log(error);
+    if (error instanceof Error) toast.error('something went wrong try again');
+    return false;
   }
 };
