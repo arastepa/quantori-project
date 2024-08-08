@@ -42,3 +42,7 @@ this command checks for linting errors using ESLint
 
 `npm run lint: fix`
 fix lint errors.
+
+# Other Details
+
+if you need to login inside app use usernames and passwords from here: https://dummyjson.com/users, for example username: emilys, password: emilyspass
