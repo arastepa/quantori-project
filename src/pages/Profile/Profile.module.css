@@ -1,5 +1,3 @@
-@import '@/app.module.css';
-
 .personla div {
     display: flex;
     flex-direction: column;
@@ -29,6 +27,17 @@ label {
     font-size: 2rem;
     border-radius: 15px;
     padding: 20px;
+}
+
+@media(max-width: 800px)
+{
+    .personal {
+        width: 90% !important;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .container .personal {

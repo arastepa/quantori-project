@@ -1,5 +1,3 @@
-@import '@/app.module.css';
-
 .menu {
     display: flex;
     font-size: 2rem;
@@ -24,7 +22,6 @@
 }
 
 .loginItem {
-    margin: 0 40px;
     padding: 10px;
     border-radius: 1px;
 }
@@ -52,4 +49,56 @@ a {
 
 .logout {
     color: red;
+}
+
+.mobile {
+    display: flex;
+}
+
+.burger {
+    display: none;
+}
+
+.loginMobile {
+    display: none;
+}
+
+.loginDesktop {
+    display: flex;
+}
+
+
+@media(max-width: 700px)
+{
+    .inner {
+        display: none !important;
+    }
+    .hideInner {
+        display: none !important;
+    }
+    .burger {
+        display: flex;
+        position: absolute;
+        right: 20px;
+    }
+    .loginDesktop {
+        display: none !important;
+    }
+    .loginMobile {
+        display: flex;
+    }
+    .inner {
+        position: absolute;
+        display: flex;
+    }
+    .showInner {
+        display: flex  !important;
+        flex-direction: column;
+        right: 20px;
+        top: 100px;
+        background-color: white;
+    }
+    .active {
+        padding: 7px 20px;
+    }
 }

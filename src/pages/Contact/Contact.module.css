@@ -1,5 +1,3 @@
-@import '@/app.module.css';
-
 .contact {
     background-color: white;
     color: #66837E;
@@ -12,4 +10,11 @@
 .contact p {
     display: flex;
     align-items: center;
+}
+
+@media(max-width: 800px)
+{
+    .contact {
+        width: 90%;
+    }
 }

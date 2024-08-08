@@ -1,5 +1,3 @@
-@import '@/app.module.css';
-
 .container {
     background-color: white;
     color: #66837E;
@@ -7,4 +5,11 @@
     margin: auto;
     padding: 20px;
     margin-top: 10%;
+}
+
+@media(max-width: 800px)
+{
+    .container {
+        width: 80%;
+    }
 }
