@@ -8,7 +8,8 @@ body {
 
 .container {
     background-color: white;
-    height: 400px;
+    min-height: fit-content;
+    height: 500px;
     margin: auto;
     width: 30%;
     color: #66837E;
@@ -24,7 +25,7 @@ input {
 }
 
 .form {
-    height: 60%;
+    height: 75%;
     margin: 40px;
     display: flex;
     flex-direction: column;
@@ -34,7 +35,10 @@ input {
 .inputs {
     display: flex;
     flex-direction: column;
-    /* gap: 20px; */
+}
+
+.inputs div {
+    margin-top: 20px;
 }
 
 .container h1 {
@@ -67,4 +71,9 @@ button {
     color: white;
     background-color: #66837E;
     padding: 7px;
+}
+
+.error {
+    color: red;
+    font-size: 1rem;
 }
