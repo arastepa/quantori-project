@@ -1,8 +1,10 @@
 import styles from '@/pages/Login/Login.module.css';
 import { login } from '@/services/login';
+import { setLogged } from '@/store/Loggedin/loggedSlice';
 import { Data } from '@/types/types';
 import { useEffect } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -13,6 +15,7 @@ const Login = () => {
     formState: { errors },
   } = useForm<Data>();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   useEffect(() => {
     if (localStorage.getItem('token')) {
       navigate('/profile');
@@ -21,6 +24,8 @@ const Login = () => {
   const loginUser: SubmitHandler<Data> = (data) => {
     console.log(data);
     login(data);
+    navigate('/profile');
+    dispatch(setLogged(true));
   };
 
   const handleCancel = () => {

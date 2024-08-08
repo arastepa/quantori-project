@@ -11,7 +11,9 @@ const Profile = () => {
     if (!localStorage.getItem('token')) {
       navigate('/login');
     } else {
-      getUser().then((user) => setUser(user));
+      getUser().then((user) => {
+        if (user) setUser(user);
+      });
     }
   }, [navigate]);
 
@@ -35,6 +37,54 @@ const Profile = () => {
         <div>
           <label htmlFor="email">Email</label>
           <input type="text" id="email" value={user?.email || ''} readOnly />
+        </div>
+        <div>
+          <label htmlFor="birth">date of birth</label>
+          <input
+            type="text"
+            id="birth"
+            value={user?.birthDate ? `${user.birthDate}` : ''}
+            readOnly
+          />
+        </div>
+      </div>
+      <div className={styles.personal}>
+        <h2>Experince</h2>
+        <div>
+          <label htmlFor="university">University</label>
+          <input
+            type="text"
+            id="university"
+            value={user?.university || ''}
+            readOnly
+          />
+        </div>
+        <div>
+          <label htmlFor="company">company</label>
+          <input
+            type="text"
+            id="company"
+            value={user?.company.name || ''}
+            readOnly
+          />
+        </div>
+        <div>
+          <label htmlFor="department">department</label>
+          <input
+            type="text"
+            id="department"
+            value={user?.company.department || ''}
+            readOnly
+          />
+        </div>
+        <div>
+          <label htmlFor="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            value={user?.company.title || ''}
+            readOnly
+          />
         </div>
       </div>
     </div>
