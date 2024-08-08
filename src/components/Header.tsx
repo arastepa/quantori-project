@@ -5,12 +5,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
 import { setLogged } from '@/store/Loggedin/loggedSlice';
 import menu from '@/assets/menu.svg';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
   const logged = useSelector((state: RootState) => state.logged);
   const dispatch = useDispatch();
   const [burgerClicked, setBurgerClicked] = useState(false);
+  useEffect(() => {
+    if (localStorage.getItem('token')) dispatch(setLogged(true));
+  }, [dispatch]);
   return (
     <ul className={styles.menu}>
       <img
@@ -63,7 +66,7 @@ const Header = () => {
             </NavLink>
           </li>
           <div className={`${styles.loginItem} ${styles.loginMobile}`}>
-            {!logged.value && (
+            {!logged.value && !localStorage.getItem('token') && (
               <li>
                 <NavLink
                   className={({ isActive }) =>
@@ -75,7 +78,7 @@ const Header = () => {
                 </NavLink>
               </li>
             )}
-            {logged.value && (
+            {(logged.value || localStorage.getItem('token')) && (
               <li>
                 <NavLink
                   className={styles.logout}
@@ -93,7 +96,7 @@ const Header = () => {
         </div>
       </div>
       <div className={`${styles.loginItem} ${styles.loginDesktop}`}>
-        {!logged.value && (
+        {!logged.value && !localStorage.getItem('token') && (
           <li>
             <NavLink
               className={({ isActive }) =>
@@ -105,7 +108,7 @@ const Header = () => {
             </NavLink>
           </li>
         )}
-        {logged.value && (
+        {(logged.value || localStorage.getItem('token')) && (
           <li>
             <NavLink
               className={styles.logout}
