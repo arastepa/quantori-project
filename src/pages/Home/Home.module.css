@@ -1,0 +1,10 @@
+@import '@/app.module.css';
+
+.container {
+    background-color: white;
+    color: #66837E;
+    margin: auto;
+    width: 40%;
+    margin-top: 10%;
+    padding: 20px;
+}
