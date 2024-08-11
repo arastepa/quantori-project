@@ -3,6 +3,7 @@
     min-height: fit-content;
     height: 600px;
     width: 30%;
+    max-width: 900px;
     color: #66837E;
     font-size: 2rem;
     border-radius: 15px;
@@ -12,6 +13,13 @@
 {
     .container {
         width: 90%;
+    }
+}
+
+@media(min-width: 800px)
+{
+    .container {
+        min-width: 700px;
     }
 }
 
