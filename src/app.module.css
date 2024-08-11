@@ -23,4 +23,5 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 80vh;
+    margin: 40px;
 }
