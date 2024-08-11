@@ -3,6 +3,7 @@
     color: #66837E;
     width: 50%;
     padding: 20px;
+    max-width: 1000px;
 }
 
 @media(max-width: 800px)
