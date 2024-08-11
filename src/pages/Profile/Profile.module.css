@@ -23,8 +23,8 @@ label {
     gap: 50px;
     min-height: fit-content;
     color: #66837E;
-    margin-top: 10%;
     font-size: 2rem;
+    width: 100%;
     border-radius: 15px;
     padding: 20px;
 }

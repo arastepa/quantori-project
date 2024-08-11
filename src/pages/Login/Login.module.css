@@ -1,11 +1,9 @@
 .container {
     background-color: white;
     min-height: fit-content;
-    height: 500px;
-    margin: auto;
+    height: 600px;
     width: 30%;
     color: #66837E;
-    margin-top: 10%;
     font-size: 2rem;
     border-radius: 15px;
 }
@@ -24,7 +22,7 @@ input {
 }
 
 .form {
-    height: 75%;
+    height: 70%;
     margin: 40px;
     display: flex;
     flex-direction: column;
